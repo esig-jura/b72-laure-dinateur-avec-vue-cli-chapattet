@@ -4,14 +4,19 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue'),
+    path: '/informations',
+    name: 'PageInformations',
+    component: () => import('../views/PageInformations.vue'),
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/',
+    name: 'PageAccueil',
+    component: () => import('../views/PageAccueil.vue'),
+  },
+  {
+    path: '/contact',
+    name: 'PageContact',
+    component: () => import('../views/PageContact.vue'),
   },
 ];
 const router = new VueRouter({
